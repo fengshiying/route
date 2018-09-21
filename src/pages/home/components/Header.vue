@@ -2,7 +2,6 @@
   <div class="header">
     <div class="header-left">
       <div class="iconfont back-icon">&#xe647;</div>
-
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe611;</span>输入城市景点</div>
