@@ -6,6 +6,7 @@
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
+
 </template>
 
 <script>
@@ -20,11 +21,6 @@
         name: "Home",
       data(){
           return{
-            city:"深圳",
-            swiperList:[],
-            iconList:[],
-            recommendList:[],
-            weekendList:[]
 
           }
       },
