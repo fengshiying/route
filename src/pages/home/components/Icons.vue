@@ -84,6 +84,7 @@
   @import "~styles/mixins.styl";
   @import "~styles/varibles.styl";
   .icons >>> .swiper-container{
+    margin-top :5px;
     height: 0;
     padding-bottom:50% ;
   }
