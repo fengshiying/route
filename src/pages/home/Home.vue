@@ -5,7 +5,6 @@
     <home-icon></home-icon>
     <home-recommend></home-recommend>
     <home-weekend></home-weekend>
-
   </div>
 
 </template>
