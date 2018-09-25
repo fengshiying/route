@@ -72,7 +72,7 @@
                 pages[page]=[]
               }
               pages[page].push(item)
-            });
+            })
             return pages;
           }
 
@@ -84,11 +84,9 @@
   @import "~styles/mixins.styl";
   @import "~styles/varibles.styl";
   .icons >>> .swiper-container{
-    margin-top :5px;
     height: 0;
     padding-bottom:50% ;
   }
-
   .icon{
     position: relative;
     overflow: hidden;
@@ -120,7 +118,10 @@
     line-height: 22px;
     text-align :center;
     color:$darkTextColor;
-    ellipsis();
+    overflow :hidden;
+    white-space nowrap;
+    text-overflow :ellipsis;
+      ellipsis();
 
   }
 
