@@ -81,13 +81,12 @@
 </script>
 
 <style scoped lang="stylus">
+  @import "~styles/mixins.styl";
   @import "~styles/varibles.styl";
   .icons >>> .swiper-container{
     height: 0;
     padding-bottom:50% ;
   }
-
-
   .icon{
     position: relative;
     overflow: hidden;
@@ -122,6 +121,7 @@
     overflow :hidden;
     white-space nowrap;
     text-overflow :ellipsis;
+      ellipsis();
 
   }
 
