@@ -75,7 +75,7 @@
     padding-bottom:40%
   }
   .item-img{
-   width 100%
+   width: 100%;
   }
   .item-info{
     padding :10px;
@@ -85,7 +85,7 @@
     line-height:35px;
     font-size:30px;
     color: #212121;
-    ellipsis()
+    ellipsis();
   }
   .item-desc{
     height: 30px;
@@ -95,7 +95,7 @@
     font-size: 18px;
     padding-bottom :10px;
 
-    ellipsis()
+    ellipsis();
   }
 
 
