@@ -5,10 +5,13 @@
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe611;</span>输入城市景点</div>
-    <div class="header-right">
-      城市
-      <span class="iconfont">&#xe64a;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont">&#xe64a;</span>
+      </div>
+    </router-link>
+
   </div>
 
 </template>
@@ -16,6 +19,9 @@
 <script>
     export default {
         name: "HomeHeader",
+      props:{
+          city:String
+      },
       data(){
           return{
           }
@@ -54,6 +60,7 @@
   .header-right{
     width:124px;
     float:right;
+    color :white;
     text-align: center;
   }
 

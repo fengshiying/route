@@ -1,12 +1,11 @@
 <template>
   <div>
-    <home-header></home-header>
+    <home-header :city="city"></home-header>
     <home-swiper></home-swiper>
     <home-icon></home-icon>
     <home-recommend></home-recommend>
     <home-weekend></home-weekend>
   </div>
-
 </template>
 
 <script>
@@ -15,11 +14,13 @@
   import HomeIcon from "./components/Icons"
   import HomeRecommend from "./components/Recommend"
   import HomeWeekend from "./components/Weekend"
+  import axios from "axios"
 
     export default {
         name: "Home",
       data(){
           return{
+            city:"深圳"
 
           }
       },
@@ -29,6 +30,23 @@
         HomeIcon,
         HomeRecommend,
         HomeWeekend
+      },
+      methods:{
+        getHomeInfo(){
+          axios.get("/static/mock/index.json")
+            .then(this.getHomeInfoSucc)
+        },
+        getHomeInfoSucc(res){
+          console.log(res);
+          res=res.data;
+          console.log(res);
+
+        }
+
+      },
+      mounted(){
+          this.getHomeInfo()
+
       }
     }
 </script>
