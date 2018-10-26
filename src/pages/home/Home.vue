@@ -11,12 +11,6 @@
 
 <script>
   import HomeHeader from "./components/Header"
-  import HomeSwiper from "./components/Swiper"
-  import HomeIcon from "./components/Icons"
-  import HomeRecommend from "./components/Recommend"
-  import HomeWeekend from "./components/Weekend"
-  import axios from "axios"
-
     export default {
         name: "Home",
       data(){

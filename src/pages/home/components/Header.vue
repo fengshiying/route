@@ -63,6 +63,7 @@
     float:right;
     color :white;
     text-align: center;
+    color :white;
   }
 
 
