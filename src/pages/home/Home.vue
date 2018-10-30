@@ -1,10 +1,10 @@
 <template>
   <div>
     <home-header :city="city"></home-header>
-    <home-swiper></home-swiper>
-    <home-icon></home-icon>
-    <home-recommend></home-recommend>
-    <home-weekend></home-weekend>
+    <home-swiper :list="swiperList"></home-swiper>
+    <home-icon :list="iconList"></home-icon>
+    <home-recommend :list="recommendList"></home-recommend>
+    <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
 
@@ -20,7 +20,11 @@
         name: "Home",
       data(){
           return{
-            city:"深圳"
+            city:"深圳",
+            swiperList:[],
+            iconList:[],
+            recommendList:[],
+            weekendList:[]
 
           }
       },
@@ -39,7 +43,15 @@
         getHomeInfoSucc(res){
           console.log(res);
           res=res.data;
-          console.log(res);
+          if(res.ret && res.data){
+            const data=res.data;
+            this.city=data.city;
+            this.swiperList=data.swiperList;
+            this.iconList=data.iconList;
+            this.recommendList=data.recommendList;
+            this.weekendList=data.weekendList;
+          }
+
 
         }
 
