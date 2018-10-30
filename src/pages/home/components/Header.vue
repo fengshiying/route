@@ -58,7 +58,8 @@
     padding-left: 10px;
     }
   .header-right{
-    width:124px;
+    width:104px;
+    padding :10px;
     float:right;
     color :white;
     text-align: center;

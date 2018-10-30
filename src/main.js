@@ -4,18 +4,23 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
+import fastClick from 'fastclick'
 import 'swiper/dist/css/swiper.css'
+import 'babel-polyfill'
 import "../build/rem"
 import "styles/reset.css"
 import "styles/border.css"
 import "styles/iconfont.css"
-Vue.use(VueAwesomeSwiper);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+fastClick.attach(document.body);
+Vue.use(VueAwesomeSwiper);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 });
